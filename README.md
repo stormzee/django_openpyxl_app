@@ -9,7 +9,7 @@ go into the project (Empapp) settings and scroll down to ===>
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'employee',
+        'NAME': 'django8',
         'USER': 'root',
         'PASSWORD':'',
         'HOST':'localhost',
