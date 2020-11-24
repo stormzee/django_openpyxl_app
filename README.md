@@ -2,8 +2,13 @@
 # Employee-collation-app
 An app to collect data of empolyees through excel data uploads
 
+# Python packages to install
+1. django
+2. openpyxl
+3. mysqlclient
+4. celery
 
-The app is developed with mysql database. if you would want to run the app with the sqlite database,
+* The app is developed with mysql database. if you would want to run the app with the sqlite database,
 go into the project (Empapp) settings and scroll down to ===>
 
 DATABASES = {
@@ -18,7 +23,7 @@ DATABASES = {
     }
 }
 
-replace the above database configuration with the code below to use sqlite database.
+* replace the above database configuration with the code below to use sqlite database.
 
 DATABASES = {
     'default': {
@@ -27,11 +32,9 @@ DATABASES = {
     }
 }
 
-# Python packages to install
-1. django
-2. openpyxl
-3. mysqlclient
-4. celery
+* And then run migrations (python manage.py makemigrations)
+* Run the server (python manage.py runserver)
+
 
 # To use it with mysql
 
