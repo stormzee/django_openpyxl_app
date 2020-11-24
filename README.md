@@ -27,6 +27,12 @@ DATABASES = {
     }
 }
 
+# Python packages to install
+1. django
+2. openpyxl
+3. mysqlclient
+4. celery
+
 # To use it with mysql
 
 After cloning the project;
