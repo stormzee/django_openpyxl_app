@@ -27,6 +27,15 @@ class Employee(models.Model):
 
     def __str__(self):
         return self.first_name + " " + self.last_name
+    
+    def get_age(self):
+        import datetime
+        self.age = (datetime.date.today() - self.date_of_birth)/365
+        return self.age
+
+    def save(self, *args, **kwargs):
+        self.get_age()
+        super(Employee, self).save(*args, **kwargs)
 
 
 class UploadFile(models.Model):
@@ -38,15 +47,6 @@ class UploadFile(models.Model):
 
 
 
-    # def get_age(self):
-    #     self.age = datetime.datetime.now() - self.date_of_birth
-    #     return self.age
-
-    # def save(self, *args, **kwargs):
-    #     self.get_age()
-    #     super(Employee, self).save(*args, **kwargs)
-
-    # def is_employee(self):
-    #     if self.supervisor.name == self.em
-
     
+
+   
